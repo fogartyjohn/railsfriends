@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>
+  <p class="lead"><%= @friend.email %></p>
+  <hr class="my-4">
+  <p>Location: Perth, Western Australia *</p>
+  <p>Vendor Rating 4.6/5 *</p>
+  <p>Shipping Policy </p>
+  <p>Social Links *</p>
+  <p>Send a message *</p>
+  <a href="#">View Shop</a>
+  <br/><br/>
+</div>
+
+<% render @friend %>
+
+<div>
+ <p class="lead">
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-info" %> 
+    <%= link_to "Back to friends", friends_path, class:"btn btn-dark" %>
+ </p>
+</div>
